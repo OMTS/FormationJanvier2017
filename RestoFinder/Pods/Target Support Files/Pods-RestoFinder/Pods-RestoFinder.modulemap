@@ -1,0 +1,6 @@
+framework module Pods_RestoFinder {
+  umbrella header "Pods-RestoFinder-umbrella.h"
+
+  export *
+  module * { export * }
+}
