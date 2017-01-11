@@ -21,16 +21,23 @@ extension CoffeeMakerDatasource {
     }
 }
 
-struct Starbucks: CoffeeMakerDelegate, CoffeeMakerDatasource {
-    func giveMeTheMenu() -> [CoffeeType] {
-        return [.americano, .latte, .frapuccino]
-    }
+
+struct Starbucks {
+    var name: String
+}
+
+extension Starbucks: CoffeeMakerDelegate {
     
     func makeCoffee(type: CoffeeType) {
         print("votre café est pret et il est de type " + type.rawValue)
     }
 }
 
+extension Starbucks: CoffeeMakerDatasource {
+    func giveMeTheMenu() -> [CoffeeType] {
+        return [.americano, .latte, .frapuccino]
+    }
+}
 
 struct Costa: CoffeeMakerDelegate, CoffeeMakerDatasource {
 
@@ -54,5 +61,5 @@ struct Person {
 }
 
 
-let me = Person(name: "Iman", coffeeHouse: Starbucks(), coffeeHouseDataSource:Costa())
+let me = Person(name: "Iman", coffeeHouse: Starbucks(name: "Starbucks avenue du bel air"), coffeeHouseDataSource:Costa())
 me.onWakeUp()
