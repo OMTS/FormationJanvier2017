@@ -9,7 +9,9 @@ target 'RestoFinder' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'Alamofire'
+  pod 'AlamofireImage'
   pod 'SwiftyJSON'
+  pod 'RealmSwift'
 
   target 'RestoFinderTests' do
     inherit! :search_paths

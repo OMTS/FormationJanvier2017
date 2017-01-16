@@ -9,13 +9,28 @@
 import UIKit
 import Firebase
 import FirebaseDatabase
+import AlamofireImage
+import Alamofire
 
 class RestosListViewController: UIViewController {
 
     @IBOutlet weak var restoTV: UITableView!
+    @IBOutlet weak var activityView: UIView!
+
     var ref: FIRDatabaseReference!
 
-    var arrayOfRestos: [Resto] = []
+    var arrayOfRestos: [Resto]? {
+        didSet {
+            if let _ = arrayOfRestos {
+                self.activityView.isHidden = true
+                self.restoTV.isHidden = false
+            }
+            else {
+                self.activityView.isHidden = false
+                self.restoTV.isHidden = true
+            }
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,20 +40,43 @@ class RestosListViewController: UIViewController {
         restoTV.estimatedRowHeight = 108.0
         restoTV.rowHeight = UITableViewAutomaticDimension
 
-        
         ref = FIRDatabase.database().reference()
     
         
-        let _ = ref.observe(.childAdded, with: { (snapshot) -> Void in
+    let _ = ref.observe(.childAdded, with: { (snapshot) -> Void in
             
             guard let restosDict = snapshot.value as? [String: AnyObject] else {
                 return
             }
+            self.updateUI(dict: restosDict)
 
-            self.arrayOfRestos = Array(restosDict.values).map {
-                return Resto(dict: $0 as! [String: AnyObject])
-            }
         })
+
+
+    let _ = ref.observe(.childChanged, with: { (snapshot) -> Void in
+
+            guard let restosDict = snapshot.value as? [String: AnyObject] else {
+                return
+            }
+            self.updateUI(dict: restosDict)
+        })
+    }
+
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+       // ref.removeAllObservers()
+    }
+
+    func updateUI(dict: [String: AnyObject]) {
+
+        arrayOfRestos = dict.map { (key, value) -> (Resto) in
+            let resto = Resto()
+            resto.fillObject(id:key, dict: value as! [String : AnyObject])
+            return resto
+        }
+
+        self.restoTV.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,10 +87,11 @@ class RestosListViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let id = segue.identifier, id == "restoDetailSegue",
-            let destVC = segue.destination as? RestoDetailViewController {
-            
+            let destVC = segue.destination as? RestoDetailViewController,
+            let array = arrayOfRestos {
+
             let indexPath = restoTV.indexPath(for: sender as! RestoCell)
-            destVC.restoName = arrayOfRestos[indexPath!.row].name
+            destVC.resto = array[indexPath!.row]
         }
     }
 }
@@ -60,15 +99,30 @@ class RestosListViewController: UIViewController {
 extension RestosListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfRestos.count
+        guard let array = arrayOfRestos else {
+            return 0
+        }
+        return array.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
+        guard let array = arrayOfRestos else {
+            return UITableViewCell()
+        }
+
         let tvCell = tableView.dequeueReusableCell(withIdentifier: "restoCell", for: indexPath) as! RestoCell
-        tvCell.nameLabel.text = arrayOfRestos[indexPath.row].name
-        tvCell.descriptionLabel.text = arrayOfRestos[indexPath.row].description
-       
+
+        let resto = array[indexPath.row]
+
+        tvCell.nameLabel.text = resto.name
+        tvCell.descriptionLabel.text = resto.desc
+
+        if let url = URL(string: resto.pictUrl) {
+            tvCell.restoIV.af_setImage(withURL: url, placeholderImage: UIImage(named: "restoPlaceholder"))
+        } else {
+            tvCell.restoIV.image = UIImage(named: "restoPlaceholder")
+        }
+
         return tvCell
     }
 }

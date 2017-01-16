@@ -20,6 +20,10 @@
 		8270CBCB1E267EA100ABC1C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8270CBCA1E267EA100ABC1C5 /* GoogleService-Info.plist */; };
 		8270CBCF1E26986000ABC1C5 /* Resto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270CBCE1E26986000ABC1C5 /* Resto.swift */; };
 		858E64B2FE9C8229857EE656 /* Pods_RestoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDEEA6E9613543D92D6B8D1 /* Pods_RestoFinder.framework */; };
+		9CB67A8D1E2CF5F500E5619E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB67A8C1E2CF5F500E5619E /* Router.swift */; };
+		9CB67A8F1E2D10CB00E5619E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB67A8E1E2D10CB00E5619E /* MapKit.framework */; };
+		9CB67A911E2D16BE00E5619E /* omts.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9CB67A901E2D16BE00E5619E /* omts.gpx */; };
+		9CB67A931E2D1BC700E5619E /* RestoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB67A921E2D1BC700E5619E /* RestoAnnotation.swift */; };
 		CCCEF61FF8AEE07804C9DE35 /* Pods_RestoFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B50DAB6530C1AD14C80B0C48 /* Pods_RestoFinderUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,6 +66,10 @@
 		8270CBC41E265E4500ABC1C5 /* RestoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoDetailViewController.swift; sourceTree = "<group>"; };
 		8270CBCA1E267EA100ABC1C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8270CBCE1E26986000ABC1C5 /* Resto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
+		9CB67A8C1E2CF5F500E5619E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		9CB67A8E1E2D10CB00E5619E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		9CB67A901E2D16BE00E5619E /* omts.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = omts.gpx; sourceTree = "<group>"; };
+		9CB67A921E2D1BC700E5619E /* RestoAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoAnnotation.swift; sourceTree = "<group>"; };
 		B50DAB6530C1AD14C80B0C48 /* Pods_RestoFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBDAB13EBD244EF2E8F2AFDF /* Pods-RestoFinder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoFinder.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestoFinder/Pods-RestoFinder.release.xcconfig"; sourceTree = "<group>"; };
 		DDF44852AAFD932DDAC0F8BD /* Pods-RestoFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RestoFinderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-RestoFinderUITests/Pods-RestoFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9CB67A8F1E2D10CB00E5619E /* MapKit.framework in Frameworks */,
 				858E64B2FE9C8229857EE656 /* Pods_RestoFinder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,6 +144,9 @@
 		8270CB8E1E262FC600ABC1C5 /* RestoFinder */ = {
 			isa = PBXGroup;
 			children = (
+				9CB67A901E2D16BE00E5619E /* omts.gpx */,
+				9CB67A8C1E2CF5F500E5619E /* Router.swift */,
+				9CB67A4B1E2CCF1F00E5619E /* Lib */,
 				8270CBCA1E267EA100ABC1C5 /* GoogleService-Info.plist */,
 				8270CBCD1E26984B00ABC1C5 /* Models */,
 				8270CBC01E26455100ABC1C5 /* Views */,
@@ -187,13 +199,22 @@
 			isa = PBXGroup;
 			children = (
 				8270CBCE1E26986000ABC1C5 /* Resto.swift */,
+				9CB67A921E2D1BC700E5619E /* RestoAnnotation.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9CB67A4B1E2CCF1F00E5619E /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 		EB83CE38D69E58EBC02D446A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9CB67A8E1E2D10CB00E5619E /* MapKit.framework */,
 				2BDEEA6E9613543D92D6B8D1 /* Pods_RestoFinder.framework */,
 				3A48F5D3265541AF567451F7 /* Pods_RestoFinderTests.framework */,
 				B50DAB6530C1AD14C80B0C48 /* Pods_RestoFinderUITests.framework */,
@@ -279,6 +300,11 @@
 					8270CB8B1E262FC600ABC1C5 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8270CB9F1E262FC600ABC1C5 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -318,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8270CB9A1E262FC600ABC1C5 /* LaunchScreen.storyboard in Resources */,
+				9CB67A911E2D16BE00E5619E /* omts.gpx in Resources */,
 				8270CBCB1E267EA100ABC1C5 /* GoogleService-Info.plist in Resources */,
 				8270CB971E262FC600ABC1C5 /* Assets.xcassets in Resources */,
 				8270CB951E262FC600ABC1C5 /* Main.storyboard in Resources */,
@@ -487,6 +514,8 @@
 				8270CBC51E265E4500ABC1C5 /* RestoDetailViewController.swift in Sources */,
 				8270CBCF1E26986000ABC1C5 /* Resto.swift in Sources */,
 				8270CBC31E26458E00ABC1C5 /* RestoCell.swift in Sources */,
+				9CB67A931E2D1BC700E5619E /* RestoAnnotation.swift in Sources */,
+				9CB67A8D1E2CF5F500E5619E /* Router.swift in Sources */,
 				8270CB901E262FC600ABC1C5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -644,6 +673,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.formation.RestoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -657,6 +687,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.formation.RestoFinder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
