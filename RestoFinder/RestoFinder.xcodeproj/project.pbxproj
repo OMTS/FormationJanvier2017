@@ -20,6 +20,11 @@
 		8270CBCB1E267EA100ABC1C5 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8270CBCA1E267EA100ABC1C5 /* GoogleService-Info.plist */; };
 		8270CBCF1E26986000ABC1C5 /* Resto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270CBCE1E26986000ABC1C5 /* Resto.swift */; };
 		858E64B2FE9C8229857EE656 /* Pods_RestoFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BDEEA6E9613543D92D6B8D1 /* Pods_RestoFinder.framework */; };
+		9C7BED941E2E7F7B00D3B561 /* Messages.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C7BED931E2E7F7B00D3B561 /* Messages.framework */; };
+		9C7BED971E2E7F7B00D3B561 /* MessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C7BED961E2E7F7B00D3B561 /* MessagesViewController.swift */; };
+		9C7BED9A1E2E7F7B00D3B561 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C7BED981E2E7F7B00D3B561 /* MainInterface.storyboard */; };
+		9C7BED9C1E2E7F7B00D3B561 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C7BED9B1E2E7F7B00D3B561 /* Assets.xcassets */; };
+		9C7BEDA01E2E7F7B00D3B561 /* restoFinderiMessageApp.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 9C7BED921E2E7F7B00D3B561 /* restoFinderiMessageApp.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9CB67A8D1E2CF5F500E5619E /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CB67A8C1E2CF5F500E5619E /* Router.swift */; };
 		9CB67A8F1E2D10CB00E5619E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB67A8E1E2D10CB00E5619E /* MapKit.framework */; };
 		9CB67A911E2D16BE00E5619E /* omts.gpx in Resources */ = {isa = PBXBuildFile; fileRef = 9CB67A901E2D16BE00E5619E /* omts.gpx */; };
@@ -42,7 +47,28 @@
 			remoteGlobalIDString = 8270CB8B1E262FC600ABC1C5;
 			remoteInfo = RestoFinder;
 		};
+		9C7BED9E1E2E7F7B00D3B561 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8270CB841E262FC600ABC1C5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C7BED911E2E7F7B00D3B561;
+			remoteInfo = restoFinderiMessageApp;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9C7BEDA41E2E7F7B00D3B561 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				9C7BEDA01E2E7F7B00D3B561 /* restoFinderiMessageApp.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		2BDEEA6E9613543D92D6B8D1 /* Pods_RestoFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RestoFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -66,6 +92,12 @@
 		8270CBC41E265E4500ABC1C5 /* RestoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestoDetailViewController.swift; sourceTree = "<group>"; };
 		8270CBCA1E267EA100ABC1C5 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8270CBCE1E26986000ABC1C5 /* Resto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resto.swift; sourceTree = "<group>"; };
+		9C7BED921E2E7F7B00D3B561 /* restoFinderiMessageApp.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = restoFinderiMessageApp.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C7BED931E2E7F7B00D3B561 /* Messages.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Messages.framework; path = System/Library/Frameworks/Messages.framework; sourceTree = SDKROOT; };
+		9C7BED961E2E7F7B00D3B561 /* MessagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesViewController.swift; sourceTree = "<group>"; };
+		9C7BED991E2E7F7B00D3B561 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		9C7BED9B1E2E7F7B00D3B561 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9C7BED9D1E2E7F7B00D3B561 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9CB67A8C1E2CF5F500E5619E /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		9CB67A8E1E2D10CB00E5619E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		9CB67A901E2D16BE00E5619E /* omts.gpx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = omts.gpx; sourceTree = "<group>"; };
@@ -103,6 +135,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C7BED8F1E2E7F7B00D3B561 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7BED941E2E7F7B00D3B561 /* Messages.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -125,6 +165,7 @@
 				8270CB8E1E262FC600ABC1C5 /* RestoFinder */,
 				8270CBA31E262FC600ABC1C5 /* RestoFinderTests */,
 				8270CBAE1E262FC600ABC1C5 /* RestoFinderUITests */,
+				9C7BED951E2E7F7B00D3B561 /* restoFinderiMessageApp */,
 				8270CB8D1E262FC600ABC1C5 /* Products */,
 				57EAAB92A29314F42FD1C882 /* Pods */,
 				EB83CE38D69E58EBC02D446A /* Frameworks */,
@@ -137,6 +178,7 @@
 				8270CB8C1E262FC600ABC1C5 /* RestoFinder.app */,
 				8270CBA01E262FC600ABC1C5 /* RestoFinderTests.xctest */,
 				8270CBAB1E262FC600ABC1C5 /* RestoFinderUITests.xctest */,
+				9C7BED921E2E7F7B00D3B561 /* restoFinderiMessageApp.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -204,6 +246,17 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		9C7BED951E2E7F7B00D3B561 /* restoFinderiMessageApp */ = {
+			isa = PBXGroup;
+			children = (
+				9C7BED961E2E7F7B00D3B561 /* MessagesViewController.swift */,
+				9C7BED981E2E7F7B00D3B561 /* MainInterface.storyboard */,
+				9C7BED9B1E2E7F7B00D3B561 /* Assets.xcassets */,
+				9C7BED9D1E2E7F7B00D3B561 /* Info.plist */,
+			);
+			path = restoFinderiMessageApp;
+			sourceTree = "<group>";
+		};
 		9CB67A4B1E2CCF1F00E5619E /* Lib */ = {
 			isa = PBXGroup;
 			children = (
@@ -218,6 +271,7 @@
 				2BDEEA6E9613543D92D6B8D1 /* Pods_RestoFinder.framework */,
 				3A48F5D3265541AF567451F7 /* Pods_RestoFinderTests.framework */,
 				B50DAB6530C1AD14C80B0C48 /* Pods_RestoFinderUITests.framework */,
+				9C7BED931E2E7F7B00D3B561 /* Messages.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -235,10 +289,12 @@
 				8270CB8A1E262FC600ABC1C5 /* Resources */,
 				BEA73FE303285C716C8CE7DA /* [CP] Embed Pods Frameworks */,
 				4DC470A6C55AE9E8C14FFECC /* [CP] Copy Pods Resources */,
+				9C7BEDA41E2E7F7B00D3B561 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				9C7BED9F1E2E7F7B00D3B561 /* PBXTargetDependency */,
 			);
 			name = RestoFinder;
 			productName = RestoFinder;
@@ -287,6 +343,23 @@
 			productReference = 8270CBAB1E262FC600ABC1C5 /* RestoFinderUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		9C7BED911E2E7F7B00D3B561 /* restoFinderiMessageApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C7BEDA31E2E7F7B00D3B561 /* Build configuration list for PBXNativeTarget "restoFinderiMessageApp" */;
+			buildPhases = (
+				9C7BED8E1E2E7F7B00D3B561 /* Sources */,
+				9C7BED8F1E2E7F7B00D3B561 /* Frameworks */,
+				9C7BED901E2E7F7B00D3B561 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = restoFinderiMessageApp;
+			productName = restoFinderiMessageApp;
+			productReference = 9C7BED921E2E7F7B00D3B561 /* restoFinderiMessageApp.appex */;
+			productType = "com.apple.product-type.app-extension.messages";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -316,6 +389,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = 8270CB8B1E262FC600ABC1C5;
 					};
+					9C7BED911E2E7F7B00D3B561 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = 8270CB871E262FC600ABC1C5 /* Build configuration list for PBXProject "RestoFinder" */;
@@ -334,6 +411,7 @@
 				8270CB8B1E262FC600ABC1C5 /* RestoFinder */,
 				8270CB9F1E262FC600ABC1C5 /* RestoFinderTests */,
 				8270CBAA1E262FC600ABC1C5 /* RestoFinderUITests */,
+				9C7BED911E2E7F7B00D3B561 /* restoFinderiMessageApp */,
 			);
 		};
 /* End PBXProject section */
@@ -362,6 +440,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C7BED901E2E7F7B00D3B561 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7BED9C1E2E7F7B00D3B561 /* Assets.xcassets in Resources */,
+				9C7BED9A1E2E7F7B00D3B561 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -536,6 +623,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C7BED8E1E2E7F7B00D3B561 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C7BED971E2E7F7B00D3B561 /* MessagesViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -548,6 +643,11 @@
 			isa = PBXTargetDependency;
 			target = 8270CB8B1E262FC600ABC1C5 /* RestoFinder */;
 			targetProxy = 8270CBAC1E262FC600ABC1C5 /* PBXContainerItemProxy */;
+		};
+		9C7BED9F1E2E7F7B00D3B561 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C7BED911E2E7F7B00D3B561 /* restoFinderiMessageApp */;
+			targetProxy = 9C7BED9E1E2E7F7B00D3B561 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -566,6 +666,14 @@
 				8270CB991E262FC600ABC1C5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9C7BED981E2E7F7B00D3B561 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C7BED991E2E7F7B00D3B561 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -668,6 +776,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 43821B2A194E05168C440117 /* Pods-RestoFinder.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RestoFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -682,6 +791,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBDAB13EBD244EF2E8F2AFDF /* Pods-RestoFinder.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RestoFinder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -750,6 +860,32 @@
 			};
 			name = Release;
 		};
+		9C7BEDA11E2E7F7B00D3B561 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = restoFinderiMessageApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.formation.RestoFinder.restoFinderiMessageApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		9C7BEDA21E2E7F7B00D3B561 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				INFOPLIST_FILE = restoFinderiMessageApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.formation.RestoFinder.restoFinderiMessageApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -788,6 +924,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9C7BEDA31E2E7F7B00D3B561 /* Build configuration list for PBXNativeTarget "restoFinderiMessageApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C7BEDA11E2E7F7B00D3B561 /* Debug */,
+				9C7BEDA21E2E7F7B00D3B561 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
