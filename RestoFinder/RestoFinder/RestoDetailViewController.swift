@@ -14,7 +14,7 @@ import RealmSwift
 class RestoDetailViewController: UIViewController {
 
     var resto: Resto?
-    //var savedResto: Resto?
+    var savedResto: Resto?
     
     @IBOutlet weak var modalNavbarItem: UINavigationItem!
     @IBOutlet weak var modalNavbar: UINavigationBar!
@@ -107,39 +107,8 @@ class RestoDetailViewController: UIViewController {
         dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func addToFavs(_ sender: UIButton) {
-        let realm = try! Realm()
 
-        if resto?.realm != nil {
-            //remove
-            try! realm.write {
-                realm.delete(resto!)
-                //reupdate current resto propertie
-                favButton.isSelected = false
-            }
 
-        }
-        else {
-            try! realm.write {
-                //Might crash the app if we try to add an invalidated object
-                realm.add(resto!, update: true)
-                favButton.isSelected = true
-            }
-        }
-
-        let pathToRealm = Realm.Configuration.defaultConfiguration.fileURL
-        print(pathToRealm!)
-    }
-
-    func changeFavButtonState() {
-        let realm = try! Realm()
-
-        //update buttons state
-        resto = realm.object(ofType: Resto.self, forPrimaryKey: resto!.id) ?? resto
-        favButton.isSelected = resto?.realm != nil
-    }
-
-    /*
     @IBAction func addToFavs(_ sender: UIButton) {
         let realm = try! Realm()
 
@@ -151,7 +120,6 @@ class RestoDetailViewController: UIViewController {
                 savedResto = nil
                 favButton.isSelected = false
             }
-
         }
         else {
             try! realm.write {
@@ -175,7 +143,6 @@ class RestoDetailViewController: UIViewController {
         savedResto = realm.object(ofType: Resto.self, forPrimaryKey: resto!.id)
         favButton.isSelected = savedResto != nil
     }
-    */
  }
 
 extension RestoDetailViewController: UINavigationBarDelegate {

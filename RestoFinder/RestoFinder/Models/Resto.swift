@@ -17,7 +17,6 @@ class Resto: Object {
     dynamic var lat: Double = 0.0
     dynamic var lng: Double = 0.0
 
-
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -30,4 +29,4 @@ class Resto: Object {
         lat = dict["lat"] as? Double ?? 0.0
         lng = dict["lng"] as? Double ?? 0.0
     }
- }
+}
